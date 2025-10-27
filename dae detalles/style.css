@@ -1,0 +1,89 @@
+/* Archivo de estilos para DAE Detalles */
+
+:root{
+  --bg:#eaf6fb;
+  --card:#ffffff;
+  --accent:#d6eef6;
+  --muted:#7b8a90;
+  --maxw:900px;
+}
+*{box-sizing:border-box}
+body{font-family:Montserrat,system-ui,Arial; margin:0; background:linear-gradient(180deg,var(--bg),#f6fbfc); color:#1b2b2f}
+.container{max-width:var(--maxw); margin:32px auto; background:var(--card); border-radius:12px; box-shadow:0 6px 30px rgba(17,31,39,0.06); overflow:hidden}
+header{padding:48px 32px 24px; text-align:center; background:var(--accent)}
+header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0; font-size:34px}
+header p.lead{max-width:680px; margin:14px auto 0; font-size:13px; color:var(--muted); line-height:1.4}
+.section{padding:28px 32px}
+.section+ .section{border-top:1px solid rgba(0,0,0,0.04)}
+.products-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:start}
+.product{text-align:center}
+.product img{width:100%; height:140px; object-fit:cover; border-radius:6px}
+.product .price{margin-top:8px; font-weight:600; font-size:15px}
+.product .title{font-size:16px; font-family:'Playfair Display',serif; margin-bottom:6px}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.cta{padding:18px; border-radius:8px; background:linear-gradient(180deg,#f8fcfd,#eef9fb)}
+.small-text{font-size:13px; color:var(--muted)}
+footer{padding:30px 32px; text-align:center}
+footer h3{font-family:'Playfair Display',serif; margin:0 0 10px; font-size:20px}
+.socials{display:flex; gap:14px; justify-content:center; margin-top:12px}
+.socials a{width:46px; height:46px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:rgba(0,0,0,0.03); text-decoration:none}
+.socials svg{width:22px; height:22px}
+.gallery-row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.gallery-row img{width:100%; height:90px; object-fit:cover; border-radius:6px}
+@media (max-width:800px){
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+  header{padding:36px 20px}
+  .section{padding:20px}
+}
+@media (max-width:480px){
+  .products-grid{grid-template-columns:1fr}
+  header h1{font-size:26px}
+  header p.lead{font-size:12px}
+}
+.btn-add {
+  margin-top: 10px;
+  padding: 8px;
+  background: #ff7b00;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background: #e46e00;
+  transform: scale(1.05);
+}
+
+.cart-container {
+  margin: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 350px;
+}
+
+#clear-cart, #save-cart {
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#clear-cart {
+  background: #ff3838;
+  color: #fff;
+}
+
+#save-cart {
+  background: #25D366;
+  color: #fff;
+}
+

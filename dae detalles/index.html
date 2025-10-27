@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAE Detalles - Tienda</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#eaf6fb;
+      --card:#ffffff;
+      --accent:#d6eef6;
+      --muted:#7b8a90;
+      --maxw:900px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Montserrat,system-ui,Arial; margin:0; background:linear-gradient(180deg,var(--bg),#f6fbfc); color:#1b2b2f}
+    .container{max-width:var(--maxw); margin:32px auto; background:var(--card); border-radius:12px; box-shadow:0 6px 30px rgba(17,31,39,0.06); overflow:hidden}
+    header{padding:48px 32px 24px; text-align:center; background:var(--accent)}
+    header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0; font-size:34px}
+    header p.lead{max-width:680px; margin:14px auto 0; font-size:13px; color:var(--muted); line-height:1.4}
+
+    .section{padding:28px 32px}
+    .section+ .section{border-top:1px solid rgba(0,0,0,0.04)}
+
+    .products-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:start}
+    .product{background:transparent; text-align:center}
+    .product img{width:100%; height:120px; object-fit:cover; border-radius:6px}
+    .product .price{margin-top:8px; font-weight:600; font-size:15px}
+    .product .title{font-size:16px; font-family:'Playfair Display',serif; margin-bottom:6px}
+
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+    .cta{padding:18px; border-radius:8px; background:linear-gradient(180deg,#f8fcfd,#eef9fb)}
+
+    .small-text{font-size:13px; color:var(--muted)}
+
+    footer{padding:30px 32px; text-align:center}
+    footer h3{font-family:'Playfair Display',serif; margin:0 0 10px; font-size:20px}
+    .socials{display:flex; gap:14px; justify-content:center; margin-top:12px}
+    .socials a{display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:10px; background:rgba(0,0,0,0.03); text-decoration:none}
+    .socials svg{width:22px; height:22px; display:block}
+
+    /* responsive */
+    @media (max-width:800px){
+      .products-grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+      header{padding:36px 20px}
+      .section{padding:20px}
+    }
+    @media (max-width:480px){
+      .products-grid{grid-template-columns:1fr}
+      header h1{font-size:26px}
+      header p.lead{font-size:12px}
+    }
+
+    /* helper for price row under images */
+    .price-row{display:flex; gap:14px; align-items:center; justify-content:center; margin-top:8px}
+    .price-pill{font-family:'Playfair Display',serif; font-size:15px}
+
+    /* small gallery row */
+    .gallery-row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .gallery-row img{width:100%; height:90px; object-fit:cover; border-radius:6px}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>DAE DETALLES</h1>
+      <p class="lead">Descubre el encanto de regalos únicos y especiales. Encuentra detalles hechos a mano con amor: amigurumis, llaveros y rosas eternas, personalizados para cada ocasión.</p>
+    </header>
+
+    <section class="section">
+      <div style="display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap">
+        <div style="flex:1 1 260px">
+          <h2 style="font-family:'Playfair Display',serif; margin:6px 0 14px; font-size:28px">LLAVEROS</h2>
+          <p class="small-text">Hecho para ti. Encuentra aquí el regalo personalizado perfecto para sorprender a tus seres queridos.</p>
+        </div>
+
+        <div style="flex:1 1 360px">
+          <div class="products-grid">
+            <div class="product" data-name="Amigurumi de monitos" data-price="40">
+      <img src="img/llavero_1.jpg" alt="Amigurumi de monitos">
+      <p class="price">40 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+<div class="product" data-name="Hongo de mostacilla" data-price="20">
+      <img src="img/llavero_2.jpg" alt="Hongo de mostacilla">
+      <p class="price">20 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+
+            <div class="product" data-name="corazon de mostacilla" data-price="15">
+      <img src="img/llavero_3.jpg" alt="Corazon de mostacilla">
+      <p class="price">15 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+            <div class="product" data-name="amigurumi de capibara" data-price="50">
+      <img src="img/llavero_4.jpg" alt="Aigurumi de capibara">
+      <p class="price">50 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="section">
+  <h2 class="titulo-seccion">ROSAS ETERNAS</h2>
+  <div class="products-grid">
+    
+    <div class="product" data-name="Rosa Dorada" data-price="60">
+      <img src="img/flor_1.jpg" alt="Rosa Dorada">
+      <p class="price">60 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+    <div class="product" data-name="Rosa Roja" data-price="40">
+      <img src="img/flor_2.jpg" alt="Rosa Roja">
+      <p class="price">40 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+    <div class="product" data-name="Rosa Blanca" data-price="65">
+      <img src="img/flor_3.jpg" alt="Rosa Blanca">
+      <p class="price">65 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    <section class="section">
+      <h4 style="font-family:'Playfair Display',serif; text-align:left; margin:0 0 12px">Qué ofrecemos</h3>
+      <div class="gallery-row">
+        <div class="product" data-name="Pulsera" data-price="15">
+      <img src="img/manilla_1.jpg" alt="Pulsera">
+      <p class="price">15 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+    <div class="product" data-name="Pulsera de ojo turco" data-price="25">
+      <img src="img/manilla_2.jpg" alt="Pulsera de ojo turco">
+      <p class="price">25 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+     <div class="product" data-name="Pulsera de girasol" data-price="20">
+      <img src="img/manilla_3.jpg" alt="Pulsera de giraol">
+      <p class="price">20 BS</p>
+      <button class="btn-add">Añadir al carrito</button>
+    </div>
+
+      <p class="small-text" style="margin-top:10px">Amigurumis, bisutería hecha a mano y flores eternas. Personalizamos pedidos y trabajamos con envíos locales, nacionales.</p>
+    </section>
+    
+    <!-- Carrito -->
+<div class="cart-container">
+  <h3>Carrito 🛒</h3>
+  <ul id="cart-list"></ul>
+  <p class="total">Total: <span id="cart-total">0</span> BS</p>
+
+  <button id="clear-cart">Eliminar carrito</button>
+  <button id="save-cart">Guardar y Enviar por WhatsApp</button>
+  </div>
+
+    <section class="section">
+      <div class="two-col">
+        <div class="cta">
+          <h4 style="margin:0 0 6px; font-family:'Playfair Display',serif">Trabaja con nosotros</h4>
+          <p class="small-text">¿Quieres vender tus diseños o hacer pedidos al por mayor? Contáctanos por WhatsApp para más información.</p>
+        </div>
+        <div class="cta" style="display:flex; flex-direction:column; justify-content:center; gap:8px">
+          <div style="font-size:14px" class="small-text">Contacto rápido</div>
+          <!-- Replace the phone number with your number (sin + ni 00) -->
+          <a id="whatsapp-btn" href="https://wa.me/59168280904?text=Hola%20DAE%20Detalles%20quiero%20informaci%C3%B3n" target="_blank" style="text-decoration:none; display:inline-block; padding:10px 14px; border-radius:10px; background:#25D366; color:white; font-weight:600; width:max-content">Abrir WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h3>Trabaja con nosotros</h3>
+      <p class="small-text">Síguenos en redes sociales o escríbenos por WhatsApp</p>
+      <div class="socials" style="margin-top:14px">
+        <!-- WhatsApp -->
+       <a href="https://wa.me/59168280904" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.7 2.3C19.2-.2 14.7-.9 11.4 1.4 5.7 4.8 3.2 11.4 4.2 16.9L3 22l5.3-1.3c5.5 1 12.2-1.5 15.7-7.2 2.3-3.8 1.9-8.5-.3-11.2z" fill="#25D366"/>
+        <path d="M17.2 15.1c-.4-.2-2.6-1.3-3-.1-.4 1.2-1.7 1.5-2.6 1.2-1-.4-2-1.6-2.5-2.6-.6-1.3.6-1.6 1.3-2 .7-.4.8-.7.2-1.3-.6-.5-1.6-1.9-1.2-3.2.4-1.2 1.7-1.4 3-1 1.3.4 2.6 1.3 3.6 2 .9.7 1.8 1.4 1.7 2.4-.1 1-.8 1.9-1.5 2.5z" fill="#fff"/>
+        </svg>
+        </a>
+
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/dae_detalles" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" fill="#E1306C"/><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0z" fill="#fff" opacity=".9"/><circle cx="17.7" cy="6.3" r="1" fill="#fff" opacity=".9"/></svg>
+        </a>
+
+      
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@dae_detalles1" target="_blank" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" x="2" y="2" rx="4" ry="4" fill="#000"/><path d="M14.5 7.2v6.1a3.5 3.5 0 11-3.5-3.5v-1.6c1.2 0 2.4.4 3.5 1z" fill="#fff"/></svg>
+        </a>
+      </div>
+
+      <p class="small-text" style="margin-top:12px">© DAE Detalles — Personaliza tus regalos • Reemplaza los enlaces con tus cuentas reales</p>
+    </footer>
+    <link rel="stylesheet" href="script.js">
+  </div>
+  <script>
+    const whatsappNumber = "59168280904";
+
+let cart = [];
+const cartList = document.getElementById("cart-list");
+const cartTotal = document.getElementById("cart-total");
+
+document.querySelectorAll(".btn-add").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const product = btn.parentElement;
+    const name = product.dataset.name;
+    const price = parseFloat(product.dataset.price);
+
+    cart.push({ name, price });
+    updateCart();
+  });
+});
+
+function updateCart() {
+  cartList.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - ${item.price} BS`;
+    cartList.appendChild(li);
+  });
+
+  cartTotal.textContent = total;
+}
+
+document.getElementById("clear-cart").addEventListener("click", () => {
+  cart = [];
+  updateCart();
+});
+
+document.getElementById("save-cart").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Tu carrito está vacío");
+    return;
+  }
+
+  let message = "Hola, quiero comprar:\n";
+  cart.forEach(item => {
+    message += `- ${item.name} (${item.price} BS)\n`;
+  });
+
+  message += `\nTotal: ${cartTotal.textContent} BS`;
+
+  const url = `https://wa.me/${59168280904}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+});
+
+  </script>
+</body>
+</html>
